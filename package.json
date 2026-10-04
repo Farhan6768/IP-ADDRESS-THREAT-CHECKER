@@ -1,0 +1,11 @@
+{
+  "name": "threatscope-workspace",
+  "version": "1.0.0",
+  "description": "ThreatScope – IP & Website Threat Checker",
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "start": "node server/server.js"
+  }
+}
