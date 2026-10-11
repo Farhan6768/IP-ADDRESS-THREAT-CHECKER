@@ -39,7 +39,7 @@ export default function RiskBadge({ status, size = 'sm', className = '' }) {
     : 'px-2.5 py-1 text-xs font-medium gap-1.5';
 
   return (
-    <span className={`inline-flex items-center rounded-full border tracking-wide uppercase font-mono ${badgeColor} ${sizeClasses} ${className}`}>
+    <span className={`inline-flex items-center rounded-full border tracking-wide uppercase font-sans font-semibold ${badgeColor} ${sizeClasses} ${className}`}>
       <Icon className={size === 'lg' ? 'w-4 h-4' : 'w-3 h-3'} />
       <span>{status}</span>
     </span>

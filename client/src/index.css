@@ -16,12 +16,14 @@ body {
   color: #0F172A;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Premium Light Scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #F1F5F9;
@@ -34,24 +36,24 @@ body {
   background: #94A3B8;
 }
 
-/* Custom Cyber SOC Card styles (Light Modern) */
+/* Modern Enterprise SOC Card styles */
 .cyber-card {
   background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .cyber-card:hover {
-  border-color: #CBD5E1;
-  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.03);
+  border-color: rgba(203, 213, 225, 0.9);
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -2px rgba(15, 23, 42, 0.02);
 }
 
 .cyber-card-secondary {
   background-color: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 0.75rem;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 1rem;
 }
 
 /* High contrast badges for light mode */

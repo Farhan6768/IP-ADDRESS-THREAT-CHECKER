@@ -97,13 +97,18 @@ export default function Dashboard() {
       {/* Top Header & Quick Actions */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-4">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="p-1.5 rounded-lg bg-teal-50 border border-teal-200 text-teal-700">
+          <div className="flex items-center gap-2.5 mb-1">
+            <span className="p-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-700 shadow-xs">
               <Compass className="w-5 h-5" />
             </span>
-            <h1 className="text-xl sm:text-2xl font-extrabold font-mono text-slate-900 tracking-wide">
-              Security Operations Center (SOC)
-            </h1>
+            <div>
+              <h1 className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-slate-900">
+                Security Operations Center (SOC)
+              </h1>
+              <p className="text-xs text-slate-500 font-normal mt-0.5">
+                Real-time threat monitoring, posture analytics, and automated security audit ledger.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -112,10 +117,10 @@ export default function Dashboard() {
             type="button"
             onClick={fetchDashboardData}
             disabled={isLoadingStats}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white hover:bg-slate-100 text-slate-700 text-xs font-mono border border-slate-200 transition-colors shadow-xs cursor-pointer disabled:opacity-50"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium border border-slate-200/90 transition-all shadow-xs cursor-pointer disabled:opacity-50"
             title="Refresh telemetry metrics"
           >
-            <RefreshCw className={`w-3.5 h-3.5 ${isLoadingStats ? 'animate-spin text-teal-600' : ''}`} />
+            <RefreshCw className={`w-3.5 h-3.5 ${isLoadingStats ? 'animate-spin text-teal-600' : 'text-slate-500'}`} />
             <span>Refresh</span>
           </button>
 
@@ -124,7 +129,7 @@ export default function Dashboard() {
               type="button"
               onClick={handleClearAllHistory}
               disabled={isClearing}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white hover:bg-red-50 text-red-700 text-xs font-mono border border-red-200 transition-colors shadow-xs cursor-pointer disabled:opacity-50"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white hover:bg-red-50 text-red-700 text-xs font-medium border border-red-200/80 transition-all shadow-xs cursor-pointer disabled:opacity-50"
               title="Clear all dashboard scan data"
             >
               <Trash2 className="w-3.5 h-3.5 text-red-600" />
@@ -134,7 +139,7 @@ export default function Dashboard() {
 
           <Link
             to="/url-scanner"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-red-primary hover:bg-red-hover text-white text-xs font-mono font-bold shadow-md shadow-red-primary/20 transition-all cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white text-xs font-semibold shadow-xs hover:shadow transition-all cursor-pointer"
           >
             <Globe className="w-4 h-4" />
             <span>Launch URL Scanner</span>
@@ -147,57 +152,57 @@ export default function Dashboard() {
       {/* SOC Statistics 4-Card Row */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Total Scans */}
-        <div className="cyber-card p-5 border border-slate-200 flex items-center justify-between">
+        <div className="cyber-card p-5 border border-slate-200/90 flex items-center justify-between shadow-xs">
           <div>
-            <span className="text-xs font-mono text-slate-500 block mb-1">TOTAL SCANS</span>
-            <div className="text-2xl font-bold font-mono text-slate-900">
+            <span className="text-[11px] font-sans font-semibold text-slate-500 uppercase tracking-wider block mb-1">TOTAL SCANS</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-slate-900">
               {stats.totalScans}
             </div>
-            <span className="text-[11px] font-mono text-slate-400 mt-1 block">Live telemetry feeds</span>
+            <span className="text-[11px] font-sans text-slate-400 mt-1 block">Live telemetry feeds</span>
           </div>
-          <div className="p-3 rounded-xl bg-blue-50 border border-blue-200 text-blue-600">
+          <div className="p-3 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600">
             <Activity className="w-6 h-6" />
           </div>
         </div>
 
         {/* Clean Targets */}
-        <div className="cyber-card p-5 border border-slate-200 flex items-center justify-between">
+        <div className="cyber-card p-5 border border-slate-200/90 flex items-center justify-between shadow-xs">
           <div>
-            <span className="text-xs font-mono text-slate-500 block mb-1">CLEAN TARGETS</span>
-            <div className="text-2xl font-bold font-mono text-teal-700">
+            <span className="text-[11px] font-sans font-semibold text-slate-500 uppercase tracking-wider block mb-1">CLEAN TARGETS</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-teal-700">
               {stats.cleanTargets}
             </div>
-            <span className="text-[11px] font-mono text-slate-400 mt-1 block">Verified safe hosts</span>
+            <span className="text-[11px] font-sans text-slate-400 mt-1 block">Verified safe hosts</span>
           </div>
-          <div className="p-3 rounded-xl bg-teal-50 border border-teal-200 text-teal-700">
+          <div className="p-3 rounded-2xl bg-teal-50 border border-teal-100 text-teal-700">
             <ShieldCheck className="w-6 h-6" />
           </div>
         </div>
 
         {/* Threats Detected */}
-        <div className="cyber-card p-5 border border-slate-200 flex items-center justify-between">
+        <div className="cyber-card p-5 border border-slate-200/90 flex items-center justify-between shadow-xs">
           <div>
-            <span className="text-xs font-mono text-slate-500 block mb-1">THREATS DETECTED</span>
-            <div className="text-2xl font-bold font-mono text-red-primary">
+            <span className="text-[11px] font-sans font-semibold text-slate-500 uppercase tracking-wider block mb-1">THREATS DETECTED</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-red-600">
               {stats.threatsDetected}
             </div>
-            <span className="text-[11px] font-mono text-slate-400 mt-1 block">Flagged suspicious</span>
+            <span className="text-[11px] font-sans text-slate-400 mt-1 block">Flagged suspicious</span>
           </div>
-          <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-primary">
+          <div className="p-3 rounded-2xl bg-red-50 border border-red-100 text-red-600">
             <ShieldAlert className="w-6 h-6" />
           </div>
         </div>
 
         {/* High Risk Targets */}
-        <div className="cyber-card p-5 border border-slate-200 flex items-center justify-between">
+        <div className="cyber-card p-5 border border-slate-200/90 flex items-center justify-between shadow-xs">
           <div>
-            <span className="text-xs font-mono text-slate-500 block mb-1">HIGH RISK TARGETS</span>
-            <div className="text-2xl font-bold font-mono text-red-primary">
+            <span className="text-[11px] font-sans font-semibold text-slate-500 uppercase tracking-wider block mb-1">HIGH RISK TARGETS</span>
+            <div className="text-2xl sm:text-3xl font-bold font-mono text-red-600">
               {stats.highRiskTargets}
             </div>
-            <span className="text-[11px] font-mono text-slate-400 mt-1 block">Critical blocklist matches</span>
+            <span className="text-[11px] font-sans text-slate-400 mt-1 block">Critical blocklist matches</span>
           </div>
-          <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-600">
+          <div className="p-3 rounded-2xl bg-rose-50 border border-rose-100 text-rose-600">
             <AlertTriangle className="w-6 h-6" />
           </div>
         </div>

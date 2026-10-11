@@ -128,58 +128,41 @@ export default function URLScanner() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-4 no-print">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="p-1.5 rounded-lg bg-teal-50 border border-teal-200 text-teal-700">
+          <div className="flex items-center gap-2.5 mb-1">
+            <span className="p-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-700 shadow-xs">
               <Globe className="w-5 h-5" />
             </span>
-            <h1 className="text-xl sm:text-2xl font-extrabold font-mono text-slate-900 tracking-wide">
-              Website, Domain & IP Threat Scanner
-            </h1>
+            <div>
+              <h1 className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-slate-900">
+                Website, Domain & IP Threat Scanner
+              </h1>
+              <p className="text-xs text-slate-500 font-normal mt-0.5">
+                Real-time multi-vector threat intelligence, DNS verification, and SSL host inspection.
+              </p>
+            </div>
           </div>
         </div>
-
-        {scanResult && (
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              onClick={handleExportExcel}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-mono font-bold text-xs shadow-sm transition-all cursor-pointer"
-              title="Download full analysis as Excel Spreadsheet (.xlsx)"
-            >
-              <FileSpreadsheet className="w-4 h-4" />
-              <span>Download Excel (.xlsx)</span>
-            </button>
-
-            <button
-              onClick={handleExportPdf}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-red-primary hover:bg-red-hover text-white text-xs font-mono font-semibold shadow-sm transition-all cursor-pointer"
-              title="Download publication-grade Security Dossier PDF"
-            >
-              <Printer className="w-4 h-4" />
-              <span>Download PDF (.pdf)</span>
-            </button>
-          </div>
-        )}
       </div>
 
       {/* Input Box */}
-      <div className="cyber-card p-6 border border-slate-200 no-print">
+      <div className="cyber-card p-4 sm:p-5 border border-slate-200/90 shadow-xs no-print">
         <form onSubmit={handleScanUrl} className="relative flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
-            <Globe className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+            <Globe className="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Enter IP address, website URL or domain (e.g. 185.220.101.5, 150.129.131.190, https://github.com)..."
               value={urlInput}
               onChange={(e) => setUrlInput(e.target.value)}
               disabled={isLoading}
-              className="w-full pl-10 pr-4 py-3 bg-slate-50 rounded-lg border border-slate-200 text-slate-900 font-mono text-sm focus:outline-none focus:border-red-primary focus:bg-white focus:ring-1 focus:ring-red-primary"
+              className="w-full pl-11 pr-4 py-3 bg-slate-50/80 hover:bg-slate-50 focus:bg-white rounded-xl border border-slate-200 text-slate-900 font-mono text-sm focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/10 transition-all placeholder:text-slate-400"
             />
           </div>
 
           <button
             type="submit"
             disabled={isLoading || !urlInput.trim()}
-            className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-xs font-semibold font-mono bg-red-primary hover:bg-red-hover text-white transition-all shadow-md shadow-red-primary/20 disabled:opacity-50 cursor-pointer"
+            className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white transition-all shadow-xs hover:shadow disabled:opacity-50 cursor-pointer flex-shrink-0"
           >
             {isLoading ? (
               <>
@@ -194,8 +177,6 @@ export default function URLScanner() {
             )}
           </button>
         </form>
-
-
       </div>
 
       {/* Loading state */}
@@ -221,16 +202,16 @@ export default function URLScanner() {
       {scanResult && !isLoading && (
         <div className="space-y-6">
           {/* Target Header & Action Ribbon */}
-          <section className="cyber-card p-6 border border-slate-200 relative overflow-hidden">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-4 border-b border-slate-200">
+          <section className="cyber-card p-6 border border-slate-200/90 relative overflow-hidden">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-4 border-b border-slate-100">
               <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[11px] font-mono text-slate-500 uppercase tracking-widest font-semibold">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-[11px] font-sans text-slate-500 uppercase tracking-wider font-bold">
                     SECURITY AUDIT DOSSIER
                   </span>
                   <RiskBadge status={scanResult.riskLevel} size="xs" />
                 </div>
-                <h2 className="text-xl sm:text-2xl font-extrabold font-mono text-slate-900 tracking-wide break-all">
+                <h2 className="text-xl sm:text-2xl font-bold font-mono text-slate-950 tracking-tight break-all">
                   {scanResult.target}
                 </h2>
               </div>
@@ -240,16 +221,16 @@ export default function URLScanner() {
                   type="button"
                   onClick={handleRescan}
                   disabled={isRescanning}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-700 text-xs font-mono border border-slate-200 transition-colors cursor-pointer disabled:opacity-50 shadow-xs"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium border border-slate-200/90 transition-all cursor-pointer disabled:opacity-50 shadow-xs"
                 >
-                  <RefreshCw className={`w-3.5 h-3.5 ${isRescanning ? 'animate-spin text-teal-600' : ''}`} />
+                  <RefreshCw className={`w-3.5 h-3.5 ${isRescanning ? 'animate-spin text-teal-600' : 'text-slate-500'}`} />
                   <span>{isRescanning ? 'Rescanning...' : 'Rescan'}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={handleExportExcel}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-mono font-bold shadow-xs transition-colors cursor-pointer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-xs hover:shadow transition-all cursor-pointer"
                   title="Download Excel Spreadsheet (.xlsx)"
                 >
                   <FileSpreadsheet className="w-3.5 h-3.5" />
@@ -259,7 +240,7 @@ export default function URLScanner() {
                 <button
                   type="button"
                   onClick={handleExportPdf}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-primary hover:bg-red-hover text-white text-xs font-mono font-semibold shadow-xs transition-colors cursor-pointer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white text-xs font-semibold shadow-xs hover:shadow transition-all cursor-pointer"
                   title="Download Security Dossier PDF (.pdf)"
                 >
                   <Printer className="w-3.5 h-3.5" />
@@ -268,7 +249,7 @@ export default function URLScanner() {
 
                 <Link
                   to={`/report/${scanResult.id}`}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-mono font-medium shadow-xs transition-colors"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold shadow-xs hover:shadow transition-all"
                 >
                   <span>Full Permadossier</span>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-300" />
@@ -277,31 +258,31 @@ export default function URLScanner() {
             </div>
 
             {/* Target Details Strip */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
-              <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
-                <span className="text-slate-500 block text-[10px]">RESOLVED HOSTNAME</span>
-                <span className="text-slate-800 font-semibold truncate block mt-0.5" title={scanResult.hostname}>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/80">
+                <span className="text-slate-500 block text-[10px] font-sans font-semibold uppercase tracking-wider">RESOLVED HOSTNAME</span>
+                <span className="text-slate-900 font-mono font-semibold text-xs truncate block mt-1" title={scanResult.hostname}>
                   {scanResult.hostname || scanResult.target}
                 </span>
               </div>
 
-              <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
-                <span className="text-slate-500 block text-[10px]">ROUTED IP ADDRESS</span>
-                <span className="text-slate-800 font-semibold truncate block mt-0.5">
+              <div className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/80">
+                <span className="text-slate-500 block text-[10px] font-sans font-semibold uppercase tracking-wider">ROUTED IP ADDRESS</span>
+                <span className="text-slate-900 font-mono font-semibold text-xs truncate block mt-1">
                   {scanResult.ipIntelligence?.ip || 'Direct Target'}
                 </span>
               </div>
 
-              <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
-                <span className="text-slate-500 block text-[10px]">ASN / PROVIDER</span>
-                <span className="text-slate-800 font-semibold truncate block mt-0.5" title={scanResult.ipIntelligence?.isp}>
+              <div className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/80">
+                <span className="text-slate-500 block text-[10px] font-sans font-semibold uppercase tracking-wider">ASN / PROVIDER</span>
+                <span className="text-slate-900 font-mono font-semibold text-xs truncate block mt-1" title={scanResult.ipIntelligence?.isp}>
                   {scanResult.ipIntelligence?.asn || scanResult.ipIntelligence?.isp || 'Cloud Network'}
                 </span>
               </div>
 
-              <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
-                <span className="text-slate-500 block text-[10px]">GEO LOCATION</span>
-                <span className="text-slate-800 font-semibold truncate block mt-0.5">
+              <div className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/80">
+                <span className="text-slate-500 block text-[10px] font-sans font-semibold uppercase tracking-wider">GEO LOCATION</span>
+                <span className="text-slate-900 font-mono font-semibold text-xs truncate block mt-1">
                   {scanResult.geoLocation?.city ? `${scanResult.geoLocation.city}, ${scanResult.geoLocation.country}` : 'Global Transit'}
                 </span>
               </div>
