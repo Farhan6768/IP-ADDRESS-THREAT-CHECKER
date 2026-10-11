@@ -97,18 +97,13 @@ export default function Dashboard() {
       {/* Top Header & Quick Actions */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-4">
         <div>
-          <div className="flex items-center gap-2.5 mb-1">
+          <div className="flex items-center gap-2.5">
             <span className="p-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-700 shadow-xs">
               <Compass className="w-5 h-5" />
             </span>
-            <div>
-              <h1 className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-slate-900">
-                Security Operations Center (SOC)
-              </h1>
-              <p className="text-xs text-slate-500 font-normal mt-0.5">
-                Real-time threat monitoring, posture analytics, and automated security audit ledger.
-              </p>
-            </div>
+            <h1 className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-slate-900">
+              Security Operations Center (SOC)
+            </h1>
           </div>
         </div>
 

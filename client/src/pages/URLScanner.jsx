@@ -128,18 +128,13 @@ export default function URLScanner() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-4 no-print">
         <div>
-          <div className="flex items-center gap-2.5 mb-1">
+          <div className="flex items-center gap-2.5">
             <span className="p-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-700 shadow-xs">
               <Globe className="w-5 h-5" />
             </span>
-            <div>
-              <h1 className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-slate-900">
-                Website, Domain & IP Threat Scanner
-              </h1>
-              <p className="text-xs text-slate-500 font-normal mt-0.5">
-                Real-time multi-vector threat intelligence, DNS verification, and SSL host inspection.
-              </p>
-            </div>
+            <h1 className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-slate-900">
+              Website, Domain & IP Threat Scanner
+            </h1>
           </div>
         </div>
       </div>
