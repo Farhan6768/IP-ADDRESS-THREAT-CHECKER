@@ -60,7 +60,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-1.5 ml-4">
+            <nav className="hidden lg:flex items-center gap-1.5 ml-1 xl:ml-3 flex-shrink-0">
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 const isActive = location.pathname === link.path;
@@ -68,14 +68,14 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap flex-shrink-0 transition-all ${
                       isActive
                         ? 'bg-slate-900 text-white shadow-xs font-semibold'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                     }`}
                   >
-                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-teal-300' : 'text-slate-500'}`} />
-                    <span>{link.name}</span>
+                    <Icon className={`w-3.5 h-3.5 flex-shrink-0 ${isActive ? 'text-teal-300' : 'text-slate-500'}`} />
+                    <span className="whitespace-nowrap">{link.name}</span>
                   </Link>
                 );
               })}
@@ -83,7 +83,7 @@ export default function Navbar() {
           </div>
 
           {/* Right Header: Quick Scanner Input & System Status */}
-          <div className="flex items-center gap-3.5">
+          <div className="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0">
             {/* Quick search input */}
             <form onSubmit={handleQuickSubmit} className="hidden xl:flex items-center relative">
               <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3" />
