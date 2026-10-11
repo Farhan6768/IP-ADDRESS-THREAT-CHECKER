@@ -18,7 +18,6 @@ import {
   Compass
 } from 'lucide-react';
 import ThreatScore from '../components/ThreatScore';
-import ThreatDetection from '../components/ThreatDetection';
 import IPInformation from '../components/IPInformation';
 import GeoLocation from '../components/GeoLocation';
 import DomainInformation from '../components/DomainInformation';
@@ -95,11 +94,6 @@ export default function URLScanner() {
     if (!scanResult?.target) return;
     setIsRescanning(true);
     handleScanUrl(null, scanResult.target);
-  };
-
-  const handleQuickUrl = (sample) => {
-    setUrlInput(sample);
-    handleScanUrl(null, sample);
   };
 
   const handleExportExcel = () => {
@@ -201,48 +195,7 @@ export default function URLScanner() {
           </button>
         </form>
 
-        {/* Quick sample chips */}
-        <div className="mt-4 flex flex-wrap items-center gap-2 text-xs font-mono text-slate-500">
-          <span>Sample Targets:</span>
-          <button
-            type="button"
-            onClick={() => handleQuickUrl('185.220.101.5')}
-            className="px-2.5 py-1 rounded bg-red-50 border border-red-200 hover:bg-red-100 text-red-700 transition-colors cursor-pointer"
-            title="Known Malicious Tor Node IP"
-          >
-            🚨 185.220.101.5 (Threat IP)
-          </button>
-          <button
-            type="button"
-            onClick={() => handleQuickUrl('150.129.131.190')}
-            className="px-2.5 py-1 rounded bg-blue-50 border border-blue-200 hover:bg-blue-100 text-blue-700 transition-colors cursor-pointer"
-            title="Enterprise ISP IP"
-          >
-            🌐 150.129.131.190 (Enterprise IP)
-          </button>
-          <button
-            type="button"
-            onClick={() => handleQuickUrl('8.8.8.8')}
-            className="px-2.5 py-1 rounded bg-teal-50 border border-teal-200 hover:bg-teal-100 text-teal-700 transition-colors cursor-pointer"
-            title="Google Public DNS IP"
-          >
-            🛡️ 8.8.8.8 (Clean IP)
-          </button>
-          <button
-            type="button"
-            onClick={() => handleQuickUrl('http://testphp.vulnweb.com/')}
-            className="px-2.5 py-1 rounded bg-amber-50 border border-amber-200 hover:bg-amber-100 text-amber-800 transition-colors cursor-pointer"
-          >
-            ⚠️ testphp.vulnweb.com (Vulnerable Web)
-          </button>
-          <button
-            type="button"
-            onClick={() => handleQuickUrl('https://github.com')}
-            className="px-2.5 py-1 rounded bg-teal-50 border border-teal-200 hover:bg-teal-100 text-teal-700 transition-colors cursor-pointer"
-          >
-            🛡️ github.com (Clean)
-          </button>
-        </div>
+
       </div>
 
       {/* Loading state */}
@@ -368,18 +321,6 @@ export default function URLScanner() {
             />
           </section>
 
-          {/* Threat Intelligence Detection Findings */}
-          {scanResult.threatIntelligence && (
-            <section>
-              <div className="flex items-center gap-2 mb-3">
-                <ShieldAlert className="w-4 h-4 text-red-primary" />
-                <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-slate-900">
-                  Threat & Risk Intelligence Findings
-                </h3>
-              </div>
-              <ThreatDetection data={scanResult.threatIntelligence} />
-            </section>
-          )}
 
           {/* IP Intelligence & Geolocation (Real Map) */}
           <section className="grid grid-cols-1 gap-6">

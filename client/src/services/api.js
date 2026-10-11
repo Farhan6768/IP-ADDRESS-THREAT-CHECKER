@@ -65,11 +65,6 @@ export const scanApi = {
     return res.data;
   },
 
-  // Dedicated IP lookup
-  lookupIp: async (ip) => {
-    const res = await apiClient.get(`/ip/${encodeURIComponent(ip)}`);
-    return res.data;
-  },
 
   // Dedicated Domain lookup
   lookupDomain: async (domain) => {

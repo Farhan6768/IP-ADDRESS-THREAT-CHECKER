@@ -21,7 +21,6 @@ import {
 import ThreatScore from '../components/ThreatScore';
 import IPInformation from '../components/IPInformation';
 import DomainInformation from '../components/DomainInformation';
-import ThreatDetection from '../components/ThreatDetection';
 import DNSRecords from '../components/DNSRecords';
 import SSLInformation from '../components/SSLInformation';
 import WhoisInformation from '../components/WhoisInformation';
@@ -259,12 +258,6 @@ export default function ThreatReport() {
         />
       </section>
 
-      {/* Threat Intelligence 8 Detection Cards */}
-      {report.threatIntelligence && (
-        <section>
-          <ThreatDetection data={report.threatIntelligence} />
-        </section>
-      )}
 
       {/* IP Intelligence & Geolocation */}
       <section className="grid grid-cols-1 gap-6">

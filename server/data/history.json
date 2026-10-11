@@ -1,1 +1,674 @@
-[]
+[
+  {
+    "id": "scan_1791713660746_eb1f7a2d",
+    "target": "http://150.129.131.190/moodle/",
+    "normalizedTarget": "http://150.129.131.190/moodle/",
+    "targetType": "URL",
+    "hostname": "150.129.131.190",
+    "scanDuration": "4.49s",
+    "timestamp": "2026-10-11T10:14:25.239Z",
+    "threatScore": 42,
+    "riskLevel": "MEDIUM RISK",
+    "confidence": "99%",
+    "detectionsCount": 1,
+    "lastChecked": "2026-10-11T10:14:22.206Z",
+    "executiveSummary": "Target http://150.129.131.190/moodle/ (URL) returned a moderate threat score of 42/100 (MEDIUM RISK). The host is operational via AS132770 Gazon Communications India Limited in IN. While no active botnet or critical malware injection was detected, security configuration anomalies (such as missing headers or SSL expiration) were noted.",
+    "ipIntelligence": {
+      "ip": "150.129.131.190",
+      "country": "IN",
+      "countryCode": "IN",
+      "city": "Pune",
+      "region": "Maharashtra",
+      "timezone": "Asia/Kolkata",
+      "isp": "AS132770 Gazon Communications India Limited",
+      "organization": "AS132770 Gazon Communications India Limited",
+      "asn": "AS132770",
+      "reverseDns": "190.131.129.150-pnq.gazonindia.com",
+      "hostingProvider": "AS132770 Gazon Communications India Limited",
+      "connectionType": "Anycast / Enterprise",
+      "latitude": 18.5196,
+      "longitude": 73.8554,
+      "status": "AVAILABLE DATA"
+    },
+    "domainIntelligence": {
+      "status": "NOT AVAILABLE",
+      "message": "Target is a direct IP address; domain registration does not apply."
+    },
+    "threatIntelligence": {
+      "blacklistStatus": {
+        "status": "CLEAN",
+        "statusType": "AVAILABLE DATA",
+        "description": "Host 150.129.131.190 is not listed on major IP/domain blocklists (Spamhaus, Spamcop, Barracuda).",
+        "source": "VirusTotal Feeds",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      },
+      "malwareDetection": {
+        "status": "NOT DETECTED",
+        "statusType": "AVAILABLE DATA",
+        "description": "Zero malware distributions or trojan dropper payloads associated with http://150.129.131.190/moodle/.",
+        "source": "ThreatScope Neural Engine",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      },
+      "phishingDetection": {
+        "status": "NOT DETECTED",
+        "statusType": "AVAILABLE DATA",
+        "description": "Valid certificates from authorized CA; no deceptive branding detected.",
+        "source": "SOC Heuristic Analysis",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      },
+      "spamReputation": {
+        "status": "SUSPICIOUS",
+        "statusType": "THREAT DETECTED",
+        "description": "No public mail exchange (MX) configured on this target entity.",
+        "source": "Mail Routing Telemetry",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      },
+      "botnetAssociation": {
+        "status": "NOT DETECTED",
+        "statusType": "AVAILABLE DATA",
+        "description": "BGP node telemetry for 150.129.131.190 indicates regular traffic with zero C2 botnet telemetry.",
+        "source": "Global Threat Feeds",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      },
+      "abuseReports": {
+        "status": "0 REPORTS",
+        "statusType": "AVAILABLE DATA",
+        "description": "Confidence 0% with 0 abuse reports on record.",
+        "source": "AbuseIPDB Verified",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      },
+      "suspiciousActivity": {
+        "status": "ELEVATED",
+        "statusType": "THREAT DETECTED",
+        "description": "Insecure cleartext transmission: Website uses unencrypted HTTP without SSL/TLS (vulnerable to eavesdropping & MITM). VirusTotal: Flagged by 1 security vendors.",
+        "source": "SOC Telemetry Pipeline",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      },
+      "knownThreats": {
+        "status": "NONE",
+        "statusType": "AVAILABLE DATA",
+        "description": "No matches against public CVE, ransomware signatures, or adversary infrastructure lists for http://150.129.131.190/moodle/.",
+        "source": "ThreatScope Global IOC Feeds",
+        "lastChecked": "2026-10-11T10:14:22.206Z"
+      }
+    },
+    "apiSources": {
+      "virusTotal": {
+        "configured": true,
+        "status": "CONNECTED"
+      },
+      "abuseIpDb": {
+        "configured": true,
+        "status": "CONNECTED"
+      },
+      "dnsTlsNative": {
+        "configured": true,
+        "status": "LIVE NATIVE RESOLUTION"
+      }
+    },
+    "securitySsl": {
+      "status": "ERROR",
+      "certificateSan": [],
+      "httpsStatus": "FAILED",
+      "statusType": "NOT AVAILABLE"
+    },
+    "dnsAnalysis": {
+      "records": [
+        {
+          "type": "PTR",
+          "host": "150.129.131.190.in-addr.arpa",
+          "value": "190.131.129.150-pnq.gazonindia.com",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        }
+      ],
+      "status": "AVAILABLE DATA"
+    },
+    "geoLocation": {
+      "country": "IN",
+      "region": "Maharashtra",
+      "city": "Pune",
+      "latitude": 18.5196,
+      "longitude": 73.8554,
+      "timezone": "Asia/Kolkata",
+      "isp": "AS132770 Gazon Communications India Limited",
+      "asn": "AS132770",
+      "status": "AVAILABLE DATA"
+    },
+    "whoisInformation": {
+      "statusType": "NOT AVAILABLE",
+      "message": "WHOIS registry queries apply exclusively to registered domain names."
+    },
+    "redirectAnalysis": {
+      "originalUrl": "http://150.129.131.190/moodle/",
+      "finalUrl": "http://150.129.131.190/moodle/",
+      "redirectCount": 0,
+      "redirectChain": [
+        {
+          "step": 1,
+          "url": "http://150.129.131.190/moodle/",
+          "statusCode": 200,
+          "statusText": "OK",
+          "isSuspicious": false,
+          "target": null
+        }
+      ],
+      "statusCode": 200,
+      "status": "AVAILABLE DATA"
+    },
+    "technologyDetection": {
+      "webServer": "Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4",
+      "programmingLanguage": "PHP 8.2.4",
+      "cdn": "Direct / None Detected",
+      "framework": "PHP/8.2.4",
+      "cms": "Moodle LMS",
+      "javascriptLibraries": [
+        "FontAwesome"
+      ],
+      "analytics": "Not Publicly Disclosed",
+      "hostingProvider": "Enterprise Dedicated Datacenter",
+      "securityHeaders": {
+        "strictTransportSecurity": "Missing (HSTS)",
+        "contentSecurityPolicy": "Missing (CSP)",
+        "xFrameOptions": "sameorigin",
+        "xContentTypeOptions": "Missing (MIME sniffing protection)",
+        "referrerPolicy": "Default",
+        "permissionsPolicy": "Missing"
+      },
+      "status": "AVAILABLE DATA"
+    },
+    "websiteErrors": {
+      "totalErrors": 7,
+      "criticalCount": 1,
+      "highCount": 0,
+      "mediumCount": 3,
+      "lowCount": 3,
+      "passedChecksCount": 1,
+      "issues": [
+        {
+          "id": "ERR_SSL_INSECURE_HTTP",
+          "category": "SSL / TLS Cryptographic Security",
+          "severity": "CRITICAL",
+          "title": "Insecure Cleartext Transmission (No HTTPS)",
+          "description": "Website operates over plain unencrypted HTTP port 80 without SSL/TLS cryptographic encryption.",
+          "impact": "Passwords, session cookies, and sensitive payloads can be sniffed or modified via Man-in-the-Middle (MITM) attacks.",
+          "recommendation": "Install a trusted SSL certificate (e.g. Let's Encrypt) and enforce 301 redirect from HTTP to HTTPS."
+        },
+        {
+          "id": "ERR_SEC_HSTS_MISSING",
+          "category": "Browser Defense Headers",
+          "severity": "MEDIUM",
+          "title": "Missing HTTP Strict Transport Security (HSTS)",
+          "description": "The \"Strict-Transport-Security\" header is absent, permitting unencrypted HTTP downgrade attacks.",
+          "impact": "Attackers can execute SSL stripping attacks on public Wi-Fi networks to intercept communications.",
+          "recommendation": "Add header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "id": "ERR_SEC_CSP_MISSING",
+          "category": "Browser Defense Headers",
+          "severity": "MEDIUM",
+          "title": "Missing Content Security Policy (CSP)",
+          "description": "The \"Content-Security-Policy\" header is not configured, leaving script execution unrestricted.",
+          "impact": "Substantially elevates vulnerability to Cross-Site Scripting (XSS) and rogue script injection.",
+          "recommendation": "Configure a Content-Security-Policy header restricting script-src, object-src, and default-src directives."
+        },
+        {
+          "id": "ERR_SEC_XCTO_MISSING",
+          "category": "Browser Defense Headers",
+          "severity": "LOW",
+          "title": "Missing MIME Sniffing Protection (X-Content-Type-Options)",
+          "description": "The \"X-Content-Type-Options: nosniff\" header is missing.",
+          "impact": "Browsers may interpret non-executable assets as executable script content if MIME type is ambiguous.",
+          "recommendation": "Add header: X-Content-Type-Options: nosniff"
+        },
+        {
+          "id": "WARN_SEC_REFERRER_DEFAULT",
+          "category": "Browser Defense Headers",
+          "severity": "LOW",
+          "title": "Missing Referrer-Policy Header",
+          "description": "No explicit Referrer-Policy is configured on outgoing navigation.",
+          "impact": "Sensitive URL parameters and tokens may leak to third-party domains via the Referer request header.",
+          "recommendation": "Add header: Referrer-Policy: strict-origin-when-cross-origin"
+        },
+        {
+          "id": "WARN_SERVER_VERSION_LEAK",
+          "category": "Information Disclosure",
+          "severity": "MEDIUM",
+          "title": "Server Build Version Disclosure",
+          "description": "Web server exposes internal software stack details: \"Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4\".",
+          "impact": "Adversaries can correlate precise version numbers with published CVE exploits and weaponized payloads.",
+          "recommendation": "Disable verbose banner signatures (e.g., ServerTokens Prod in Apache, server_tokens off in Nginx)."
+        },
+        {
+          "id": "WARN_POWERED_BY_LEAK",
+          "category": "Information Disclosure",
+          "severity": "LOW",
+          "title": "Application Runtime Disclosure (X-Powered-By)",
+          "description": "Backend runtime framework leaked in response header: \"PHP/8.2.4\".",
+          "impact": "Informs automated attack scanners about the exact backend execution environment.",
+          "recommendation": "Disable the X-Powered-By header (e.g. app.disable(\"x-powered-by\") in Express, expose_php = Off in php.ini)."
+        }
+      ],
+      "passedChecks": [
+        {
+          "title": "Anti-Clickjacking Protection Active",
+          "description": "Frame rendering restricted with \"sameorigin\"."
+        }
+      ],
+      "healthGrade": "F",
+      "status": "ERRORS_DETECTED"
+    },
+    "securityRecommendations": [
+      {
+        "priority": "MEDIUM",
+        "title": "Configure HTTP Strict Transport Security (HSTS)",
+        "action": "Deploy \"Strict-Transport-Security: max-age=31536000; includeSubDomains; preload\" to ensure browsers never downgrade to unencrypted HTTP."
+      },
+      {
+        "priority": "LOW",
+        "title": "Implement Content Security Policy (CSP)",
+        "action": "Configure a Content-Security-Policy header to restrict unauthorized script injection and defend against cross-site scripting (XSS)."
+      }
+    ]
+  },
+  {
+    "id": "scan_1791713045902_c7cc2a49",
+    "target": "https://leetcode.com/",
+    "normalizedTarget": "https://leetcode.com/",
+    "targetType": "URL",
+    "hostname": "leetcode.com",
+    "scanDuration": "3.69s",
+    "timestamp": "2026-10-11T10:04:09.594Z",
+    "threatScore": 0,
+    "riskLevel": "SAFE",
+    "confidence": "99%",
+    "detectionsCount": 0,
+    "lastChecked": "2026-10-11T10:04:07.114Z",
+    "executiveSummary": "Target https://leetcode.com/ (URL) demonstrated a robust, healthy cybersecurity posture with a score of 0/100 (SAFE). Geolocation maps to AS13335 Cloudflare, Inc. in US with valid SSL certificates and zero blocklist appearances. Continuous routine SOC monitoring is recommended.",
+    "ipIntelligence": {
+      "ip": "2606:4700:90d7:34d2:3043:4de:823c:3ec",
+      "country": "US",
+      "countryCode": "US",
+      "city": "San Francisco",
+      "region": "California",
+      "timezone": "America/Los_Angeles",
+      "isp": "AS13335 Cloudflare, Inc.",
+      "organization": "AS13335 Cloudflare, Inc.",
+      "asn": "AS13335",
+      "reverseDns": "2606:4700:90d7:34d2:3043:4de:823c:3ec.in-addr.arpa",
+      "hostingProvider": "AS13335 Cloudflare, Inc.",
+      "connectionType": "Datacenter / Cloud Edge",
+      "latitude": 37.7621,
+      "longitude": -122.3971,
+      "status": "AVAILABLE DATA"
+    },
+    "domainIntelligence": {
+      "domain": "leetcode.com",
+      "registrar": "GoDaddy.com, LLC",
+      "registrationDate": "2010-07-11",
+      "expirationDate": "2034-07-11",
+      "domainAge": "16 years, 3 months",
+      "nameservers": [
+        "rob.ns.cloudflare.com",
+        "melinda.ns.cloudflare.com"
+      ],
+      "dnsSummary": {
+        "aCount": 2,
+        "aaaaCount": 0,
+        "mxCount": 5,
+        "nsCount": 2,
+        "txtCount": 5,
+        "cnameCount": 0,
+        "total": 14
+      },
+      "status": "AVAILABLE DATA"
+    },
+    "threatIntelligence": {
+      "blacklistStatus": {
+        "status": "CLEAN",
+        "statusType": "AVAILABLE DATA",
+        "description": "Host 2606:4700:90d7:34d2:3043:4de:823c:3ec is not listed on major IP/domain blocklists (Spamhaus, Spamcop, Barracuda).",
+        "source": "VirusTotal Feeds",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      },
+      "malwareDetection": {
+        "status": "NOT DETECTED",
+        "statusType": "AVAILABLE DATA",
+        "description": "Zero malware distributions or trojan dropper payloads associated with leetcode.com.",
+        "source": "ThreatScope Neural Engine",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      },
+      "phishingDetection": {
+        "status": "NOT DETECTED",
+        "statusType": "AVAILABLE DATA",
+        "description": "Valid certificates from authorized CA; no deceptive branding detected.",
+        "source": "SOC Heuristic Analysis",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      },
+      "spamReputation": {
+        "status": "CLEAN",
+        "statusType": "AVAILABLE DATA",
+        "description": "Mail exchange verified (5 MX records configured). SPF policy active.",
+        "source": "Mail Routing Telemetry",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      },
+      "botnetAssociation": {
+        "status": "NOT DETECTED",
+        "statusType": "AVAILABLE DATA",
+        "description": "BGP node telemetry for 2606:4700:90d7:34d2:3043:4de:823c:3ec indicates regular traffic with zero C2 botnet telemetry.",
+        "source": "Global Threat Feeds",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      },
+      "abuseReports": {
+        "status": "0 REPORTS",
+        "statusType": "AVAILABLE DATA",
+        "description": "Confidence 0% with 0 abuse reports on record.",
+        "source": "AbuseIPDB Verified",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      },
+      "suspiciousActivity": {
+        "status": "NORMAL",
+        "statusType": "AVAILABLE DATA",
+        "description": "0 redirects observed. TLS TLSv1.3 active. Standard baseline operating telemetry.",
+        "source": "SOC Telemetry Pipeline",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      },
+      "knownThreats": {
+        "status": "NONE",
+        "statusType": "AVAILABLE DATA",
+        "description": "No matches against public CVE, ransomware signatures, or adversary infrastructure lists for https://leetcode.com/.",
+        "source": "ThreatScope Global IOC Feeds",
+        "lastChecked": "2026-10-11T10:04:07.114Z"
+      }
+    },
+    "apiSources": {
+      "virusTotal": {
+        "configured": true,
+        "status": "CONNECTED"
+      },
+      "abuseIpDb": {
+        "configured": true,
+        "status": "CONNECTED"
+      },
+      "dnsTlsNative": {
+        "configured": true,
+        "status": "LIVE NATIVE RESOLUTION"
+      }
+    },
+    "securitySsl": {
+      "status": "VALID",
+      "isValid": true,
+      "certificateIssuer": "Google Trust Services",
+      "certificateValidFrom": "2026-10-09",
+      "certificateExpiry": "2027-01-07",
+      "tlsVersion": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "certificateSubject": "leetcode.com",
+      "certificateSan": [
+        "leetcode.com",
+        "static-lccn.leetcode.com"
+      ],
+      "httpsStatus": "VALID / ENFORCED",
+      "daysRemaining": 88,
+      "fingerprint": "71:13:85:36:B5:96:78:B8:BF:FF:4C:26:44:9F:B9:99:38:6D:86:73",
+      "statusType": "AVAILABLE DATA"
+    },
+    "dnsAnalysis": {
+      "records": [
+        {
+          "type": "A",
+          "host": "leetcode.com",
+          "value": "172.66.154.160",
+          "ttl": 30,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "A",
+          "host": "leetcode.com",
+          "value": "104.20.41.79",
+          "ttl": 30,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "MX",
+          "host": "leetcode.com",
+          "value": "Priority 1: aspmx.l.google.com",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "MX",
+          "host": "leetcode.com",
+          "value": "Priority 5: alt1.aspmx.l.google.com",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "MX",
+          "host": "leetcode.com",
+          "value": "Priority 5: alt2.aspmx.l.google.com",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "MX",
+          "host": "leetcode.com",
+          "value": "Priority 10: alt4.aspmx.l.google.com",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "MX",
+          "host": "leetcode.com",
+          "value": "Priority 10: alt3.aspmx.l.google.com",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "NS",
+          "host": "leetcode.com",
+          "value": "rob.ns.cloudflare.com",
+          "ttl": 86400,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "NS",
+          "host": "leetcode.com",
+          "value": "melinda.ns.cloudflare.com",
+          "ttl": 86400,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "TXT",
+          "host": "leetcode.com",
+          "value": "google-site-verification=ds0HPGUEYOzxPbBHmhQUrjDGv2-jKNpAOYcYK0dhSlw",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "TXT",
+          "host": "leetcode.com",
+          "value": "anthropic-domain-verification-eym4e4=lH3v8Fwoae08kGLzRZQ9PW76l",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "TXT",
+          "host": "leetcode.com",
+          "value": "google-site-verification=uPA2Afaqn3DS4X4oaTesCU4ucbWXEdQXhdtyre0mdmg",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "TXT",
+          "host": "leetcode.com",
+          "value": "domain-verification=6265d606aef4f770bf52dccbf18644e645dcada2b1ec0ce5a6061fb49cd55b5c",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        },
+        {
+          "type": "TXT",
+          "host": "leetcode.com",
+          "value": "v=spf1 include:amazonses.com include:_spf.google.com include:mail.zendesk.com include:sendgrid.net -all",
+          "ttl": 3600,
+          "status": "ACTIVE"
+        }
+      ],
+      "summary": {
+        "aCount": 2,
+        "aaaaCount": 0,
+        "mxCount": 5,
+        "nsCount": 2,
+        "txtCount": 5,
+        "cnameCount": 0,
+        "total": 14
+      },
+      "status": "AVAILABLE DATA"
+    },
+    "geoLocation": {
+      "country": "US",
+      "region": "California",
+      "city": "San Francisco",
+      "latitude": 37.7621,
+      "longitude": -122.3971,
+      "timezone": "America/Los_Angeles",
+      "isp": "AS13335 Cloudflare, Inc.",
+      "asn": "AS13335",
+      "status": "AVAILABLE DATA"
+    },
+    "whoisInformation": {
+      "registrar": "GoDaddy.com, LLC",
+      "createdDate": "2010-07-11",
+      "updatedDate": "2025-03-25",
+      "expiryDate": "2034-07-11",
+      "status": [
+        "clientDeleteProhibited"
+      ],
+      "nameservers": [
+        "rob.ns.cloudflare.com",
+        "melinda.ns.cloudflare.com"
+      ],
+      "registrant": {
+        "organization": "REDACTED FOR PRIVACY (ICANN / GDPR Compliant)",
+        "country": "REDACTED",
+        "state": "REDACTED",
+        "email": "Contact GoDaddy.com, LLC abuse desk for verified legal inquiries",
+        "privacyProtected": true
+      },
+      "rawSource": "Verisign Global WHOIS Registry (RFC 3912)",
+      "statusType": "AVAILABLE DATA"
+    },
+    "redirectAnalysis": {
+      "originalUrl": "https://leetcode.com/",
+      "finalUrl": "https://leetcode.com/",
+      "redirectCount": 0,
+      "redirectChain": [
+        {
+          "step": 1,
+          "url": "https://leetcode.com/",
+          "statusCode": 200,
+          "statusText": "Direct",
+          "isSuspicious": false
+        }
+      ],
+      "statusCode": 200,
+      "status": "AVAILABLE DATA"
+    },
+    "technologyDetection": {
+      "webServer": "Standard HTTP Server",
+      "programmingLanguage": "Modern ECMAScript / WebAssembly",
+      "cdn": "Direct / None Detected",
+      "framework": "Modern Web Stack",
+      "cms": "Custom / Headless",
+      "javascriptLibraries": [
+        "Modern Vanilla / ES Modules"
+      ],
+      "analytics": "Not Publicly Disclosed",
+      "hostingProvider": "Cloud Datacenter",
+      "securityHeaders": {
+        "strictTransportSecurity": "Missing (HSTS)",
+        "contentSecurityPolicy": "Missing (CSP)",
+        "xFrameOptions": "Missing (Clickjacking protection)",
+        "xContentTypeOptions": "Missing (MIME sniffing protection)",
+        "referrerPolicy": "Default",
+        "permissionsPolicy": "Missing"
+      },
+      "status": "AVAILABLE DATA"
+    },
+    "websiteErrors": {
+      "totalErrors": 5,
+      "criticalCount": 0,
+      "highCount": 0,
+      "mediumCount": 3,
+      "lowCount": 2,
+      "passedChecksCount": 1,
+      "issues": [
+        {
+          "id": "ERR_SEC_HSTS_MISSING",
+          "category": "Browser Defense Headers",
+          "severity": "MEDIUM",
+          "title": "Missing HTTP Strict Transport Security (HSTS)",
+          "description": "The \"Strict-Transport-Security\" header is absent, permitting unencrypted HTTP downgrade attacks.",
+          "impact": "Attackers can execute SSL stripping attacks on public Wi-Fi networks to intercept communications.",
+          "recommendation": "Add header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "id": "ERR_SEC_CSP_MISSING",
+          "category": "Browser Defense Headers",
+          "severity": "MEDIUM",
+          "title": "Missing Content Security Policy (CSP)",
+          "description": "The \"Content-Security-Policy\" header is not configured, leaving script execution unrestricted.",
+          "impact": "Substantially elevates vulnerability to Cross-Site Scripting (XSS) and rogue script injection.",
+          "recommendation": "Configure a Content-Security-Policy header restricting script-src, object-src, and default-src directives."
+        },
+        {
+          "id": "ERR_SEC_XFRAME_MISSING",
+          "category": "Browser Defense Headers",
+          "severity": "MEDIUM",
+          "title": "Missing Anti-Clickjacking Header (X-Frame-Options)",
+          "description": "The \"X-Frame-Options\" header is absent and no CSP frame-ancestors directive was detected.",
+          "impact": "Hostile sites can embed this web page inside a transparent <iframe> to hijack user clicks (Clickjacking).",
+          "recommendation": "Add header: X-Frame-Options: SAMEORIGIN or DENY."
+        },
+        {
+          "id": "ERR_SEC_XCTO_MISSING",
+          "category": "Browser Defense Headers",
+          "severity": "LOW",
+          "title": "Missing MIME Sniffing Protection (X-Content-Type-Options)",
+          "description": "The \"X-Content-Type-Options: nosniff\" header is missing.",
+          "impact": "Browsers may interpret non-executable assets as executable script content if MIME type is ambiguous.",
+          "recommendation": "Add header: X-Content-Type-Options: nosniff"
+        },
+        {
+          "id": "WARN_SEC_REFERRER_DEFAULT",
+          "category": "Browser Defense Headers",
+          "severity": "LOW",
+          "title": "Missing Referrer-Policy Header",
+          "description": "No explicit Referrer-Policy is configured on outgoing navigation.",
+          "impact": "Sensitive URL parameters and tokens may leak to third-party domains via the Referer request header.",
+          "recommendation": "Add header: Referrer-Policy: strict-origin-when-cross-origin"
+        }
+      ],
+      "passedChecks": [
+        {
+          "title": "HTTPS Encryption Enforced",
+          "description": "Trusted SSL/TLS certificate (TLSv1.3) issued by Authorized CA."
+        }
+      ],
+      "healthGrade": "C",
+      "status": "WARNINGS_DETECTED"
+    },
+    "securityRecommendations": [
+      {
+        "priority": "MEDIUM",
+        "title": "Configure HTTP Strict Transport Security (HSTS)",
+        "action": "Deploy \"Strict-Transport-Security: max-age=31536000; includeSubDomains; preload\" to ensure browsers never downgrade to unencrypted HTTP."
+      },
+      {
+        "priority": "LOW",
+        "title": "Implement Content Security Policy (CSP)",
+        "action": "Configure a Content-Security-Policy header to restrict unauthorized script injection and defend against cross-site scripting (XSS)."
+      }
+    ]
+  }
+]

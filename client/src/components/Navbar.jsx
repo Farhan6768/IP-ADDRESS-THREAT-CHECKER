@@ -10,7 +10,6 @@ import {
   History, 
   ArrowRight,
   Activity,
-  Server,
   Zap
 } from 'lucide-react';
 
@@ -23,7 +22,6 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Dashboard', path: '/', icon: LayoutDashboard },
     { name: 'URL Scanner', path: '/url-scanner', icon: Globe },
-    { name: 'IP Lookup', path: '/ip-lookup', icon: Server },
     { name: 'Threat Reports', path: '/history', icon: History }
   ];
 
